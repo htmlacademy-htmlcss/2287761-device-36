@@ -12,11 +12,14 @@
     <nav class="navigation">
       <ul class="navigation-list">
         <li class="navigation-item">
+          <form class="navigation-form" action="https://echo.htmlacademy.ru/" method="post">
             <label for="navigation-search"></label>
+            <img class="navigation-pic" src="#" alt="Лупа">
             <input class="field" placeholder="Поиск по сайту" type="search" name="navigation-search" id="navigation-search" required>
             <button class="button search-button" type="submit">
               <span>Найти</span>
             </button>
+          </form>
         </li>
         <li class="navigation-item">
           <img class="navigation-pic" src="#" alt="Человек">
@@ -216,7 +219,6 @@
       <address class="footer-contacts-address">
         <p class="footer-contacts-address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
       </address>
-      <img class="footer-line-separator" src="#" alt="Разделитель">
     </section>
     <section class="footer-links">
       <h2 class="visually-hidden">Ссылки</h2>
@@ -251,8 +253,16 @@
     </section>
     <section class="phone">
       <h2 class="visually-hidden">Телефон</h2>
-      <a class="footer-phone" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
-      <img class="footer-logo-developer" src="#" alt="Логотип разработчика">
+      <ul class="footer-phone-list">
+        <li class="footer-phone-item">
+          <a class="footer-phone" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
+        </li>
+        <li class="footer-phone-item">
+          <a class="footer-logo-developer-link" href="https://htmlacademy.ru/">
+            <img class="footer-logo-developer" src="#" alt="Логотип разработчика">
+          </a>
+        </li>
+      </ul>
     </section>
   </footer>
 </body>
