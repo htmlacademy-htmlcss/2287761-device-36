@@ -6,15 +6,14 @@
   </head>
   <body>
     <header class="page-header">
-      <a class="logo" href="#">
-        <img class="logo-image" src="#" alt="Логотип интернет-магазина Девайс">
+      <a class="logo">
+        <img class="logo-image" src="images/logo/logo.svg" width="145" height="36" alt="Логотип интернет-магазина Девайс">
       </a>
       <nav class="navigation">
         <ul class="navigation-list">
           <li class="navigation-item">
             <form class="navigation-form" action="https://echo.htmlacademy.ru/" method="post">
               <label for="navigation-search"></label>
-              <img class="navigation-pic" src="#" alt="Лупа">
               <input class="field" placeholder="Поиск по сайту" type="search" name="navigation-search" id="navigation-search" required>
               <button class="button search-button" type="submit">
                 <span>Найти</span>
@@ -22,24 +21,22 @@
             </form>
           </li>
           <li class="navigation-item">
-            <img class="navigation-pic" src="#" alt="Человек">
             <a class="navigation-link" href="#">Профиль</a>
           </li>
         </ul>
         <ul class="navigation-list">
           <li class="navigation-item">
-            <img class="navigation-pic" src="#" alt="График">
             <a class="navigation-link" href="#">Cравнить</a>
           </li>
           <li class="navigation-item">
-            <img class="navigation-pic" src="#" alt="Корзина">
+            <span class="count-cart">2</span>
             <a class="navigation-link" href="#">Корзина</a>
           </li>
         </ul>
         <div class="navigation level-2">
           <a class="navigation-button-toggle" href="#">
             Каталог товаров
-            <img class="accordion-pic" src="#" alt="Кнопка плюс">
+            <img class="accordion-pic" src="/images/icons/plus.svg" width="50" height="50" alt="Кнопка плюс">
           </a>
         </div>
         <ul class="navigation-list level-2">
@@ -57,9 +54,10 @@
     </header>
     <main class="main-index">
       <section class="device">
+        <h1 class="visually-hidden">Магазин Девайс</h1>
         <div class="gallery">
           <h2 class="visually-hidden">Фото устройства</h2>
-            <img class="slider-image" src="#" alt="Устройство">
+            <img class="slider-image" src="/images/slider/slider-1.png" width="560" height="560" alt="Устройство">
             <button class="slider-button slider-prev" type="button">
               <span class="visually-hidden">Предыдущее фото</span>
             </button>
@@ -68,7 +66,7 @@
             </button>
         </div>
         <div class="about-device">
-          <h2 class="visual-hidden">Описание устройства</h2>
+          <h2 class="visually-hidden">Описание устройства</h2>
           <span class="number-device">01</span>
           <h3>Порхает как бабочка,жалит как пчела!</h3>
           <p class="device-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
@@ -103,27 +101,27 @@
         <h2 class="visually-hidden">Виды устройств</h2>
         <ul class="device-pic-list">
           <li class="device-pic-item">
-            <img class="device-pic-image" src="#" alt="Виртуальная реальность">
+            <img class="device-pic-image" src="/images/device-pic/device-pic-1.svg" width="97" height="55" alt="Виртуальная реальность">
             <p class="device-pic-title">Виртуальная реальность</p>
           </li>
           <li class="device-pic-item">
-            <img class="device-pic-image" src="#" alt="Моноподы">
+            <img class="device-pic-image" src="/images/device-pic/device-pic-2.svg" width="86" height="117" alt="Моноподы">
             <p class="device-pic-title">Моноподы для селфи</p>
           </li>
           <li class="device-pic-item">
-            <img class="device-pic-image" src="#" alt="Экшен-камера">
+            <img class="device-pic-image" src="/images/device-pic/device-pic-3.svg" width="71" height="87" alt="Экшен-камера">
             <p class="device-pic-title">Экшн-камеры</p>
           </li>
           <li class="device-pic-item">
-            <img class="device-pic-image" src="#" alt="Фитнес-браслеты">
+            <img class="device-pic-image" src="/images/device-pic/device-pic-4.svg" width="108" height="65" alt="Фитнес-браслеты">
             <p class="device-pic-title">Фитнес-браслеты</p>
           </li>
           <li class="device-pic-item">
-            <img class="device-pic-image" src="#" alt="Умные часы">
+            <img class="device-pic-image" src="/images/device-pic/device-pic-5.svg" width="56" height="98" alt="Умные часы">
             <p class="device-pic-title">Умные часы</p>
           </li>
           <li class="device-pic-item">
-            <img class="device-pic-image" src="#" alt="Квадрокоптеры">
+            <img class="device-pic-image" src="/images/device-pic/device-pic-6.svg" width="132" height="69" alt="Квадрокоптеры">
             <p class="device-pic-title">Квадрокоптеры</p>
           </li>
         </ul>
@@ -144,15 +142,14 @@
         <div class="services-block-description">
           <h3 class="service-title">Доставка</h3>
           <p class="service-description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-          <img class="service-image" src="#" alt="Бегущий человек">
         </div>
       </section>
       <section class="delivery">
         <h2 class="visually-hidden">Доставка редких товаров</h2>
-        <img class="delivry-icon" src="#" alt="Грузовик">
         <p>Доставим редкий товар под заказ</p>
-        <a class="button button-delivery" href="#">
-          <span class="visually-hidden">Информация</span>
+        <a class="delivery-info" href="#">
+          <p class="visually-hidden">Доставка редких товаров</p>
+          <img class="delivery-info-icon" src="/images/icons/Vector-i.svg" width="40" height="40" alt="Информация">
         </a>
       </section>
       <section class="about-us">
@@ -188,15 +185,12 @@
           <label for="newsletter-email">Email</label>
           <input class="field" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required>
           <button class="button newsletter-button" type="submit">Подписаться</button>
-          <div class="free">
-            <img class="free-agree-icon" src="#" alt="Зеленая галочка">
-            <p>Это бесплатно</p>
-          </div>
+          <div class="free"><p>Это бесплатно</p></div>
         </form>
       </section>
     </main>
     <footer class="page-footer">
-      <img class="footer-logo" src="#" alt="Логотип интернет-магазина Девайс">
+      <img class="footer-logo" src="/images/logo/logo-footer.svg" width="145" height="36" alt="Логотип интернет-магазина Девайс">
       <section class="footer-contacts">
         <h2 class="visually-hidden">Контакты</h2>
         <address class="footer-contacts-address">
@@ -242,7 +236,7 @@
           </li>
           <li class="footer-phone-item">
             <a class="footer-logo-developer-link" href="https://htmlacademy.ru/">
-              <img class="footer-logo-developer" src="#" alt="Логотип разработчика">
+              <img class="footer-logo-developer" src="/images/logo/Vector-logo-developer.svg" width="115" height="33" alt="Логотип разработчика">
             </a>
           </li>
         </ul>
