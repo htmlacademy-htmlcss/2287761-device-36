@@ -33,7 +33,25 @@ body {
     color: #444;
 }
 
-/* Header */
+.title {
+    font-family: "Raleway", sans-serif;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 50px;
+    color: #000;
+}
+
+.button {
+    font-family: "Raleway", sans-serif;
+    font-weight: 800;
+    line-height: 21px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000;
+    text-decoration: none;
+}
+
+/* header */
 
 .page-header {
     color: #000;
@@ -53,7 +71,7 @@ body {
     text-align: center;
 }
 
-/* Block #1 */
+/* device */
 
 .number-device {
     font-weight: 700;
@@ -67,14 +85,6 @@ body {
     line-height: 50px;
 }
 
-.button {
-    font-family: "Raleway", sans-serif;
-    font-weight: 800;
-    line-height: 21px;
-    text-align: center;
-    text-transform: uppercase;
-}
-
 .device-detail-item {
     font-size: 16px;
 }
@@ -82,4 +92,57 @@ body {
 .device-detail-item span {
     font-size: 36px;
     color: #000;
+}
+
+/* device-pic */
+
+.device-pic-image {
+    background-color: #FFE17F;
+}
+
+.device-pic-title {
+    font-weight: 800;
+    line-height: 24px;
+}
+
+/* additional-services */
+
+.additional-services {
+    background-color: #F0F0F0;
+}
+
+.service-title {
+    font-family: "Raleway", sans-serif;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 50px;
+}
+
+/* delivery */
+
+.plash-block {
+    background-color: #F0F0F0;
+}
+
+.plash-block p {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* index-columns */
+
+.contacts-subtitle {
+    font-size: 24px;
+    font-weight: 700;;
+}
+
+.transport-companies li {
+    font-weight: 700;
+    line-height: 20px;
+    color: #000;
+    margin-bottom: 19px;
 }
