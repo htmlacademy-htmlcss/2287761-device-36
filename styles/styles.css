@@ -146,3 +146,49 @@ body {
     color: #000;
     margin-bottom: 19px;
 }
+
+.contacts-phone {
+    color: #444;
+}
+
+/* subscribe */
+
+.subscribe {
+    background-color: #F0F0F0;
+}
+
+.subscribe-title {
+    font-family: "Raleway", sans-serif;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 50px;
+    color: #000;
+}
+
+/* footer */
+
+.page-footer {
+    background-color: #444;
+    color: #fff;
+}
+
+.footer-contacts-address-text {
+    font-size: 16px;
+    line-height: 20px;
+    font-style: normal;
+}
+
+.footer-links-item {
+    font-family: "Raleway", sans-serif;
+    color: #fff;
+    font-weight: 800;
+    line-height: 21px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.footer-phone {
+    font-size: 16px;
+    line-height: 20px;
+    color: #fff;
+}
