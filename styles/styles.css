@@ -182,6 +182,8 @@ body {
   display: flex;
   width: 1160px;
   justify-content: center;
+  margin: 0;
+  padding: 0;
 }
 
 /* device-pic */
@@ -189,6 +191,8 @@ body {
 .device-pic-list {
   display: flex;
   justify-content: space-between;
+  margin: 0;
+  padding: 0;
 }
 
 .container-image {
@@ -228,6 +232,8 @@ body {
 
 .additional-services-block-button {
   width: 287px;
+  margin: 0;
+  padding: 0;
 }
 
 .services-block-description {
@@ -260,7 +266,20 @@ body {
     text-transform: uppercase;
 }
 
-/* index-columns */
+/* about-us & contacts */
+
+.index-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-us {
+  width: 530px;
+}
+
+.contacts {
+  width: 530px;
+}
 
 .contacts-subtitle {
     font-size: 24px;
@@ -278,6 +297,11 @@ body {
     color: #444;
 }
 
+.contacts-schedule {
+  margin: 0;
+  padding: 0;
+}
+
 /* subscribe */
 
 .subscribe {
@@ -290,6 +314,28 @@ body {
     font-size: 50px;
     line-height: 50px;
     color: #000;
+}
+
+.container-subscribe {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-subscribe-title {
+  width: 350px;
+}
+
+.container-subscribe-description {
+  width: 560px;
+}
+
+.newsletter-form {
+  width: 810px;
+}
+
+.free {
+  width: 160px;
+  text-align: right;
 }
 
 /* footer */
@@ -314,11 +360,33 @@ body {
     text-decoration: none;
 }
 
-.footer-phone {
+.phone {
     font-size: 16px;
     line-height: 20px;
     color: #fff;
 }
+
+.footer-contacts {
+  width: 240px;
+}
+
+.footer-links {
+  width: 450px;
+}
+
+.footer-phone {
+  width: 175px;
+}
+
+.page-footer ul{
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links li {
+  text-align: center;
+}
+
 
 /* catalog */
 
