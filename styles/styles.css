@@ -188,8 +188,17 @@ body {
 
 /* device-pic */
 
+.device-pic-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-image {
+  background-color: #FFE17F;
+}
+
 .device-pic-item {
-    background-color: #FFE17F;
+    width: 160px;
 }
 
 .device-pic-title {
