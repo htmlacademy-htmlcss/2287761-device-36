@@ -64,6 +64,7 @@ body {
 .container-header {
   width: 1160px;
   margin: 0 auto;
+  background-color: #FFE17F;
 }
 
 .navigation-list {
@@ -73,7 +74,6 @@ body {
 
 .page-header {
     color: #000;
-    background-color: #FFE17F;
 }
 
 .level-2 .navigation-link {
@@ -93,6 +93,11 @@ body {
 
 .main-container {
   flex-grow: 1;
+}
+
+.page-container {
+  width: 1160px;
+  margin: 0 auto;
 }
 
 /* device */
