@@ -59,6 +59,15 @@ body {
     text-decoration: none;
 }
 
+.main-container {
+  flex-grow: 1;
+}
+
+.block-content-container {
+  width: 1160px;
+  margin: 0 auto;
+}
+
 /* header */
 
 .container-header {
@@ -133,17 +142,6 @@ body {
     text-align: center;
 }
 
-/* pages */
-
-.main-container {
-  flex-grow: 1;
-}
-
-.page-container {
-  width: 1160px;
-  margin: 0 auto;
-}
-
 /* device */
 
 .number-device {
@@ -167,7 +165,7 @@ body {
     color: #000;
 }
 
-.index-columns {
+.device .index-columns {
   display: flex;
   justify-content: space-between;
 }
@@ -222,6 +220,19 @@ body {
 .button-choose {
     color: #FFE17F;
     background-color: #000;
+}
+
+.additional-services .index-columns {
+  display: flex;
+}
+
+.additional-services-block-button {
+  width: 287px;
+}
+
+.services-block-description {
+  width: 452px;
+  margin-left: 116px;
 }
 
 /* delivery */
