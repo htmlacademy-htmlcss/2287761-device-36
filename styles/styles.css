@@ -239,6 +239,16 @@ body {
 
 .plash-block {
     background-color: #F0F0F0;
+    display: flex;
+}
+
+.plash-block .left-column {
+  width: 910px;
+  margin-left: 125px;
+}
+
+.plash-block .right-column {
+  flex-grow: 1;
 }
 
 .plash-block p {
