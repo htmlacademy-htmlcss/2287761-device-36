@@ -97,6 +97,25 @@ body {
   margin-left: auto;
 }
 
+.container-navigation-level-2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation-right-column {
+  width: 293px;
+}
+
+.container-navigation-level-2 .navigation-list {
+  width: 471px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-navigation-level-2 .navigation-item {
+  width: 125px;
+}
+
 .page-header {
     color: #000;
 }
