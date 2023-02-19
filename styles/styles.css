@@ -167,6 +167,25 @@ body {
     color: #000;
 }
 
+.index-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.gallery {
+  width: 560px;
+}
+
+.about-device {
+  width:560px;
+}
+
+.slider-pagination {
+  display: flex;
+  width: 1160px;
+  justify-content: center;
+}
+
 /* device-pic */
 
 .device-pic-item {
