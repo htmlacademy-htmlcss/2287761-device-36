@@ -67,9 +67,34 @@ body {
   background-color: #FFE17F;
 }
 
+.container-content-header {
+  width: 1040px;
+  margin: 0 auto;
+}
+
 .navigation-list {
+  display: flex;
   margin: 0;
   padding: 0;
+}
+
+.level-1 .navigation-item:nth-child(1) {
+  width: 517px;
+}
+
+.level-1 .navigation-item:nth-child(2) {
+  width: 231px;
+  margin-left: 26px;
+}
+
+.level-1 .navigation-item:nth-child(3) {
+  width: 105px;
+  margin-left: 26px;
+}
+
+.level-1 .navigation-item:last-child {
+  width: 99px;
+  margin-left: auto;
 }
 
 .page-header {
