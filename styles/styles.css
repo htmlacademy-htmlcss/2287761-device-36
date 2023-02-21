@@ -24,7 +24,15 @@
     font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+    margin:0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
     font-family: "Rubik", sans-serif;
     font-size: 18px;
     line-height: 30px;
@@ -51,11 +59,74 @@ body {
     text-decoration: none;
 }
 
+.main-container {
+  flex-grow: 1;
+}
+
+.block-content-container {
+  width: 1160px;
+  margin: 0 auto;
+}
+
 /* header */
+
+.container-header {
+  width: 1160px;
+  margin: 0 auto;
+  background-color: #FFE17F;
+}
+
+.container-content-header {
+  width: 1040px;
+  margin: 0 auto;
+}
+
+.navigation-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.level-1 .navigation-item:nth-child(1) {
+  width: 517px;
+}
+
+.level-1 .navigation-item:nth-child(2) {
+  width: 231px;
+  margin-left: 26px;
+}
+
+.level-1 .navigation-item:nth-child(3) {
+  width: 105px;
+  margin-left: 26px;
+}
+
+.level-1 .navigation-item:last-child {
+  width: 99px;
+  margin-left: auto;
+}
+
+.container-navigation-level-2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation-right-column {
+  width: 293px;
+}
+
+.container-navigation-level-2 .navigation-list {
+  width: 471px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-navigation-level-2 .navigation-item {
+  width: 125px;
+}
 
 .page-header {
     color: #000;
-    background-color: #FFE17F;
 }
 
 .level-2 .navigation-link {
@@ -94,10 +165,42 @@ body {
     color: #000;
 }
 
+.device .index-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.gallery {
+  width: 560px;
+}
+
+.about-device {
+  width:560px;
+}
+
+.slider-pagination {
+  display: flex;
+  width: 1160px;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
 /* device-pic */
 
-.device-pic-image {
-    background-color: #FFE17F;
+.device-pic-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.container-image {
+  background-color: #FFE17F;
+}
+
+.device-pic-item {
+    width: 160px;
 }
 
 .device-pic-title {
@@ -123,10 +226,35 @@ body {
     background-color: #000;
 }
 
+.additional-services .index-columns {
+  display: flex;
+}
+
+.additional-services-block-button {
+  width: 287px;
+  margin: 0;
+  padding: 0;
+}
+
+.services-block-description {
+  width: 452px;
+  margin-left: 116px;
+}
+
 /* delivery */
 
 .plash-block {
     background-color: #F0F0F0;
+    display: flex;
+}
+
+.plash-block .left-column {
+  width: 910px;
+  margin-left: 125px;
+}
+
+.plash-block .right-column {
+  flex-grow: 1;
 }
 
 .plash-block p {
@@ -138,7 +266,20 @@ body {
     text-transform: uppercase;
 }
 
-/* index-columns */
+/* about-us & contacts */
+
+.index-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-us {
+  width: 530px;
+}
+
+.contacts {
+  width: 530px;
+}
 
 .contacts-subtitle {
     font-size: 24px;
@@ -156,6 +297,11 @@ body {
     color: #444;
 }
 
+.contacts-schedule {
+  margin: 0;
+  padding: 0;
+}
+
 /* subscribe */
 
 .subscribe {
@@ -168,6 +314,28 @@ body {
     font-size: 50px;
     line-height: 50px;
     color: #000;
+}
+
+.container-subscribe {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-subscribe-title {
+  width: 350px;
+}
+
+.container-subscribe-description {
+  width: 560px;
+}
+
+.newsletter-form {
+  width: 810px;
+}
+
+.free {
+  width: 160px;
+  text-align: right;
 }
 
 /* footer */
@@ -192,13 +360,60 @@ body {
     text-decoration: none;
 }
 
-.footer-phone {
+.phone {
     font-size: 16px;
     line-height: 20px;
     color: #fff;
 }
 
+.footer-contacts {
+  width: 240px;
+}
+
+.footer-links {
+  width: 450px;
+}
+
+.footer-phone {
+  width: 175px;
+}
+
+.page-footer ul{
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links li {
+  text-align: center;
+}
+
+
 /* catalog */
+
+.main-inner {
+  background-color: #F0F0F0;
+}
+
+.catalog-products {
+  display: flex;
+}
+
+.catalog-filter {
+  width: 320px;
+}
+
+.catalog-filter ul {
+  margin: 0;
+  padding: 0;
+}
+
+.catalog-right-column {
+  width: 840px;
+}
+
+.product-list {
+  background-color: #fff;
+}
 
 .inner-header-title {
     font-family: "Raleway", sans-serif;
