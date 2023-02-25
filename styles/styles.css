@@ -63,6 +63,10 @@ body {
   flex-grow: 1;
 }
 
+.main-inner {
+  flex-grow: 1;
+}
+
 .block-content-container {
   width: 1160px;
   margin: 0 auto;
@@ -74,11 +78,7 @@ body {
   width: 1160px;
   margin: 0 auto;
   background-color: #FFE17F;
-}
-
-.container-content-header {
-  width: 1040px;
-  margin: 0 auto;
+  padding: 0 60px;
 }
 
 .navigation-list {
@@ -268,7 +268,7 @@ body {
 
 /* about-us & contacts */
 
-.index-columns {
+.index-columns-about {
   display: flex;
   justify-content: space-between;
 }
@@ -390,11 +390,11 @@ body {
 
 /* catalog */
 
-.main-inner {
+.inner-header, .catalog-products {
   background-color: #F0F0F0;
 }
 
-.catalog-products {
+.catalog-products .block-content-container {
   display: flex;
 }
 
