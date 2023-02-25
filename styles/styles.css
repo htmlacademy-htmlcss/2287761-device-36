@@ -272,7 +272,7 @@ body {
 /* device-pic */
 
 .device-pic {
-  padding: 70px 0;
+  padding: 70px 0 172px 0;
 }
 
 .device-pic-list {
@@ -302,6 +302,7 @@ body {
 
 .additional-services {
     background-color: #F0F0F0;
+    padding-bottom: 72px;
 }
 
 .service-title {
@@ -311,6 +312,10 @@ body {
     line-height: 50px;
 }
 
+.additional-services-block-button-item:not(:last-child) {
+  margin-bottom: 35px;
+}
+
 .button-choose {
     color: #FFE17F;
     background-color: #000;
@@ -318,12 +323,14 @@ body {
 
 .additional-services .index-columns {
   display: flex;
+  align-items: center;
 }
 
 .additional-services-block-button {
   width: 287px;
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 .services-block-description {
@@ -333,9 +340,15 @@ body {
 
 /* delivery */
 
+.delivery {
+  padding: 70px 0;
+}
+
 .plash-block {
     background-color: #F0F0F0;
     display: flex;
+    height: 100px;
+    align-items: center;
 }
 
 .plash-block .left-column {
@@ -344,7 +357,7 @@ body {
 }
 
 .plash-block .right-column {
-  flex-grow: 1;
+  padding: 30px 42px;
 }
 
 .plash-block p {
@@ -354,6 +367,10 @@ body {
     line-height: 23px;
     text-align: center;
     text-transform: uppercase;
+}
+
+.delivery-info {
+  display: block;
 }
 
 /* about-us & contacts */
