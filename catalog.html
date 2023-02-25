@@ -7,14 +7,14 @@
 </head>
 <body>
   <header class="page-header">
-    <div class="container-header">
+    <div class="container-header-inner">
       <a class="logo">
         <img class="logo-image" src="images/logo/logo.svg" width="145" height="36" alt="Логотип интернет-магазина Девайс">
       </a>
       <nav class="navigation">
         <ul class="navigation-list level-1">
           <li class="navigation-item">
-            <form class="navigation-form" action="https://echo.htmlacademy.ru/" method="post">
+            <form class="navigation-form form" action="https://echo.htmlacademy.ru/" method="post">
               <label for="navigation-search"></label>
               <input class="field" placeholder="Поиск по сайту" type="search" name="navigation-search" id="navigation-search" required>
               <button class="button search-button" type="submit">
@@ -36,7 +36,7 @@
         <div class="container-navigation-level-2">
           <div class="navigation-right-column">
             <a class="navigation-button-toggle navigation-link" href="#">
-              Каталог товаров
+              <span class="accordion-title">Каталог товаров</span>
               <img class="accordion-pic" src="images/icons/plus.svg" width="50" height="50" alt="Кнопка плюс">
             </a>
           </div>
@@ -115,7 +115,6 @@
               </li>
             </ul>
           </fieldset>
-          <h4 class="title-filter">Сортировка:</h4>
           <fieldset class="catalog-filter-group">
             <legend class="catalog-filter-title">Bluetooth</legend>
             <ul class="catalog-filter-list">
@@ -136,68 +135,81 @@
           <button class="button" type="submit">Показать</button>
         </form>
         <div class="catalog-right-column">
-          <select class="select-control" aria-label="Сортировка">
-            <option value="popular">Популярные</option>
-            <option value="cheap">Дешёвые</option>
-            <option value="expensive">Дорогие</option>
-          </select>
-          <a href="#" class="button up">
-            <span class="visually-hidden">Сортировка по возрастанию</span>
-          </a>
-          <a class="button down" href="#">
-            <span class="visually-hidden">Сортировка по убыванию</span>
-          </a>
-          <ul class="product-list">
-            <li class="product-card">
-              <a class="product-card-link" href="#">
-                <img class="product-card-image" src="images/catalog/catalog-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
-                <h3 class="product-card-title">Любительская селфи-палка</h3>
-                <strong class="product-card-price">500 ₽</strong>
-              </a>
-            </li>
-            <li class="product-card">
-              <a class="product-card-link" href="#">
-                <img class="product-card-image" src="images/catalog/catalog-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
-                <h3 class="product-card-title">Профессиональная селфи-палка </h3>
-                <strong class="product-card-price">1 500 ₽</strong>
-              </a>
-            </li>
-            <li class="product-card">
-              <a class="product-card-link" href="#">
-                <img class="product-card-image" src="images/catalog/catalog-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
-                <h3 class="product-card-title">Непотопляемая селфи-палка</h3>
-                <strong class="product-card-price">2 500 ₽</strong>
-              </a>
-            </li>
-            <li class="product-card">
-              <a class="product-card-link" href="#">
-                <img class="product-card-image" src="images/catalog/catalog-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
-                <h3 class="product-card-title">Селфи-палка «Следуй за мной»</h3>
-                <strong class="product-card-price">1 500 ₽</strong>
-              </a>
-            </li>
-          </ul>
-          <button class="button product-card-more" type="button">Загрузить ещё</button>
-          <div class="pagination">
-            <a class="pagination-prev pagination-disabled">Назад</a>
-            <ol class="pagination-page-number-list">
-              <li class="pagination-page-number-item">
-                <a class="pagination-link pagination-current">1</a>
+          <div class="sorting-container">
+            <h4 class="title-sorting">Сортировка:</h4>
+            <select class="select-control" aria-label="Сортировка">
+              <option value="popular">Популярные</option>
+              <option value="cheap">Дешёвые</option>
+              <option value="expensive">Дорогие</option>
+            </select>
+            <a href="#" class="button up">
+              <span class="visually-hidden">Сортировка по возрастанию</span>
+            </a>
+            <a class="button down" href="#">
+              <span class="visually-hidden">Сортировка по убыванию</span>
+            </a>
+          </div>
+          <div class="product-container">
+            <ul class="product-list">
+              <li class="product-card">
+                <a class="product-card-link" href="#">
+                  <img class="product-card-image" src="images/catalog/catalog-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
+                  <div class="product-description-container">
+                    <h3 class="product-card-title">Любительская селфи-палка</h3>
+                    <span class="product-card-price">500 ₽</span>
+                  </div>
+                </a>
               </li>
-              <li class="pagination-page-number-item">
-                <a class="pagination-link" href="#">2</a>
+              <li class="product-card">
+                <a class="product-card-link" href="#">
+                  <img class="product-card-image" src="images/catalog/catalog-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
+                  <div class="product-description-container">
+                    <h3 class="product-card-title">Профессиональная селфи-палка </h3>
+                    <span class="product-card-price">1 500 ₽</span>
+                  </div>
+                </a>
               </li>
-              <li class="pagination-page-number-item">
-                <a class="pagination-link" href="#">3</a>
+              <li class="product-card">
+                <a class="product-card-link" href="#">
+                  <img class="product-card-image" src="images/catalog/catalog-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
+                  <div class="product-description-container">
+                    <h3 class="product-card-title">Непотопляемая селфи-палка</h3>
+                    <span class="product-card-price">2 500 ₽</span>
+                  </div>
+                </a>
               </li>
-              <li class="pagination-page-number-item">
-                <span class="pagination-link">...</span>
+              <li class="product-card">
+                <a class="product-card-link" href="#">
+                  <img class="product-card-image" src="images/catalog/catalog-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
+                  <div class="product-description-container">
+                    <h3 class="product-card-title">Селфи-палка «Следуй за мной»</h3>
+                    <span class="product-card-price">1 500 ₽</span>
+                  </div>
+                </a>
               </li>
-              <li class="pagination-page-number-item">
-                <a class="pagination-link" href="#">15</a>
-              </li>
-            </ol>
-            <a class="pagination-next" href="#">Вперёд</a>
+            </ul>
+            <button class="button product-card-more" type="button">Загрузить ещё</button>
+            <div class="pagination-container">
+              <a class="pagination-prev pagination-disabled">Назад</a>
+              <ol class="pagination">
+                <li class="pagination-item">
+                  <a class="pagination-link pagination-current">1</a>
+                </li>
+                <li class="pagination-item">
+                  <a class="pagination-link" href="#">2</a>
+                </li>
+                <li class="pagination-item">
+                  <a class="pagination-link" href="#">3</a>
+                </li>
+                <li class="pagination-item">
+                  <span class="pagination-link">...</span>
+                </li>
+                <li class="pagination-item">
+                  <a class="pagination-link" href="#">15</a>
+                </li>
+              </ol>
+              <a class="pagination-next" href="#">Вперёд</a>
+            </div>
           </div>
         </div>
       </div>
@@ -205,9 +217,9 @@
   </main>
   <footer class="page-footer">
     <div class="block-content-container">
+      <img class="footer-logo" src="images/logo/logo-footer.svg" width="145" height="36" alt="Логотип интернет-магазина Девайс">
       <div class="index-columns">
         <section class="footer-contacts">
-          <img class="footer-logo" src="images/logo/logo-footer.svg" width="145" height="36" alt="Логотип интернет-магазина Девайс">
           <h2 class="visually-hidden">Контакты</h2>
           <address class="footer-contacts-address">
             <p class="footer-contacts-address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
