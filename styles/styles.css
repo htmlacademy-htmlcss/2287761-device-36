@@ -92,9 +92,10 @@ body {
 
 .container-header {
   width: 1160px;
+  height: 300px;
   margin: 0 auto;
   background-color: #FFE17F;
-  padding: 0 60px 150px 60px;
+  padding: 0 60px;
   margin-top: 25px;
 }
 
@@ -594,6 +595,7 @@ p.contacts-address-text {
 
 .container-header-inner {
   width: 1160px;
+  height: 186px;
   margin: 0 auto;
   background-color: #FFE17F;
   padding: 0 60px 20px 60px;
