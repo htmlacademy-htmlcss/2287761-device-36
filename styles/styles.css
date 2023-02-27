@@ -762,6 +762,7 @@ p.contacts-address-text {
 
 .product-card-image {
   margin-bottom: 32px;
+  object-fit: contain;
 }
 
 .product-card-title {
