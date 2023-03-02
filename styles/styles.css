@@ -288,8 +288,10 @@ body {
 }
 
 .device-detail-item span {
+  display: block;
   font-size: 36px;
   color: #000;
+  margin-bottom: 12px;
 }
 
 .device .index-columns {
@@ -321,7 +323,7 @@ body {
 /* device-pic */
 
 .device-pic {
-  padding: 70px 0 172px 0;
+  padding: 70px 0 70px 0;
 }
 
 .device-pic-list {
@@ -337,6 +339,10 @@ body {
   margin-bottom: 32px;
 }
 
+.device-pic-image{
+  display: block;
+}
+
 .device-pic-item {
   width: 160px;
 }
@@ -345,14 +351,37 @@ body {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   line-height: 24px;
+  letter-spacing: -0.02em;
   margin: 0;
 }
 
 /* additional-services */
 
-.additional-services {
+.additional-services{
+  position: relative;
+  padding-bottom: 142px;
+}
+
+.additional-services::before {
+  content: '';
+  position: absolute;
+  top: 102px;
+  left: 0;
+  width: 100%;
+  height: 289px;
   background-color: #F0F0F0;
-  padding-bottom: 72px;
+  z-index: -1;
+}
+
+.additional-services .index-columns {
+  display: flex;
+  align-items: center;
+  margin-right: 63px;
+  padding: 64px 0;
+  background-image: url("../images/postman.svg");
+  background-repeat: no-repeat;
+  background-size: 136px 164px;
+  background-position: center right;
 }
 
 .service-title {
@@ -396,16 +425,22 @@ body {
   width: 152px;
 }
 
-.additional-services .index-columns {
-  display: flex;
-  align-items: center;
-}
-
 .additional-services-block-button {
+  position: relative;
   width: 287px;
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+.additional-services-block-button::before{
+  content: '';
+  position: absolute;
+  top: -64px;
+  left: calc(100% - 7px);
+  width: 7px;
+  height: calc(100% + 128px);
+  background-color: #000;
 }
 
 .services-block-description {
