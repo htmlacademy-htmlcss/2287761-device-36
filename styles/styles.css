@@ -597,6 +597,8 @@ p.contacts-address-text {
 
 .footer-links {
   width: 460px;
+  display: flex;
+  flex-direction: column;
 }
 
 .footer-phone {
@@ -617,6 +619,7 @@ p.contacts-address-text {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  flex-grow: 1;
 }
 
 .footer-phone-item:nth-child(1){
@@ -632,15 +635,26 @@ p.contacts-address-text {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: flex-end;
 }
 
 .footer-social-item {
+  position: relative;
   width: 40px;
   height: 40px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
 }
 
 .footer-social-item:not(:nth-child(1)) {
   margin-left: 15px;
+}
+
+.footer-navigation-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
 
 /* catalog */
