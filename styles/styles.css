@@ -129,11 +129,52 @@ body {
   align-items: center;
 }
 
+.navigation-form {
+  display: flex;
+}
+
+.search-button{
+  width: 160px;
+  height: 40px;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-align: center;
+  border: 2px solid #000;
+  border-left: none;
+  border-radius: 0 20px 20px 0;
+  background-color: transparent;
+}
+
+.navigation-form .field {
+  flex-grow: 1;
+  border-radius: 20px 0 0 20px;
+  border: 2px solid #000;
+  background-color: transparent;
+  padding-left: 48px;
+  background-image: url("../images/icons/search.svg");
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  background-position: 12px 10px;
+  box-sizing: border-box;
+}
+
+.navigation-form .field::placeholder {
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-align: left;
+  color: #000;
+  opacity: .3;
+}
 .level-1 .navigation-item:nth-child(1) {
   width: 517px;
 }
 
 .level-1 .navigation-item:nth-child(2) {
+  display: flex;
   width: 231px;
   margin-left: 26px;
 }
@@ -144,11 +185,12 @@ body {
 }
 
 .level-1 .navigation-item:last-child {
+  position: relative;
   width: 100px;
   margin-left: 36px;
 }
 
-.level-1 .navigation-item:nth-child(2) .navigation-link {
+.level-1 .navigation-item:nth-child(2) .navigation-link:first-child {
   padding-left: 27px;
   background-image: url("../images/icons/icons-user.svg");
   background-repeat: no-repeat;
@@ -170,6 +212,11 @@ body {
   background-repeat: no-repeat;
   background-size: 16px 14px;
   background-position: 0 5px;
+}
+
+.log-out {
+  margin-left: 28px;
+  opacity: .3;
 }
 
 .container-navigation-level-2 {
@@ -234,9 +281,16 @@ body {
 
 .count-cart {
   position: absolute;
-  line-height: 17px;
+  width: 21px;
+  height: 21px;
+  top: 50%;
+  left: -18px;
+  transform: translateY(-50%);
+  line-height: 21px;
   text-align: center;
   font-size: 14px;
+  background-color: #fff;
+  border-radius: 50%;
 }
 
 /* device */
@@ -462,7 +516,6 @@ body {
 }
 
 .container-icon {
-  /* width: 125px; */
   padding: 35px 40px;
   background-color: #FFE17F;
 }
@@ -612,6 +665,7 @@ p.contacts-address-text {
 
 .newsletter-form {
   width: 810px;
+  display: flex;
 }
 
 .free {
@@ -743,7 +797,7 @@ p.contacts-address-text {
 /* catalog */
 
 .container-header-inner {
-  width: 1160px;
+  width: 1040px;
   height: 186px;
   margin: 0 auto;
   background-color: #FFE17F;
