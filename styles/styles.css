@@ -615,8 +615,11 @@ p.contacts-address-text {
 }
 
 .free {
-  width: 160px;
-  text-align: right;
+  padding-left: 32px;
+  background-image: url("../images/icons/Vector-agree.svg");
+  background-repeat: no-repeat;
+  background-size: 13px 12px;
+  background-position: center left;
 }
 
 /* footer */
@@ -661,7 +664,18 @@ p.contacts-address-text {
 }
 
 .footer-contacts {
+  position: relative;
   width: 240px;
+}
+
+.footer-contacts::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: calc(100% - 23px);
+  height: 7px;
+  width: 80px;
+  background-color: #FFC500;
 }
 
 .footer-links {
