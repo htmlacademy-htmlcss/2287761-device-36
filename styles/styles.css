@@ -157,7 +157,6 @@ body {
   background-repeat: no-repeat;
   background-size: 16px 16px;
   background-position: 12px 10px;
-  box-sizing: border-box;
 }
 
 .navigation-form .field::placeholder {
@@ -854,7 +853,29 @@ p.contacts-address-text {
   text-decoration: none;
   font-size: 16px;
   line-height: 20px;
+}
+
+.breadcrumbs-item {
+  position: relative;
   margin-right: 36px;
+}
+
+.breadcrumbs-item::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 7px;
+  top: 50%;
+  right: -20px;
+  transform: translateY(-50%);
+  background-image: url(../images/icons/arrow.svg);
+  background-repeat: no-repeat;
+  background-size: 4px 7px;
+  background-position: center center;
+}
+
+.breadcrumbs-item:last-child:after {
+  content: none;
 }
 
 .title-filter,
@@ -901,15 +922,16 @@ p.contacts-address-text {
   margin-left: 206px;
 }
 
-.button.up {
+.button-up {
   width: 30px;
   height: 30px;
   margin-left: auto;
 }
 
-.button.down {
+.button-down {
   width: 30px;
   height: 30px;
+  transform: rotate(180deg);
 }
 
 .product-container {
@@ -957,7 +979,13 @@ p.contacts-address-text {
   color: #444;
 }
 
-.button.product-card-more {
+.product-card-more {
+  font-family: 'Raleway',sans-serif;
+  font-weight: 800;
+  line-height: 19px;
+  letter-spacing: 0.2em;
+  color: #000;
+  text-transform: uppercase;
   border: 3px solid #E5E5E5;
   background-color: #fff;
   width: 100%;
@@ -965,6 +993,7 @@ p.contacts-address-text {
   text-align: center;
   padding: 18px;
   margin: 44px 0;
+
 }
 
 .pagination-container {
