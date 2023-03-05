@@ -1209,17 +1209,105 @@ p.contacts-address-text {
 }
 
 .product-card-link {
+  display: block;
   text-decoration: none;
+  transition: .3s;
+}
+
+.container-product-card-image {
+  position: relative;
+}
+
+.product-card-image {
+  display: block;
+  width: 360px;
+  height: 380px;
+  margin-bottom: 32px;
+  object-fit: contain;
+}
+
+.container-product-card-image::before {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(240, 240, 240, 0.8);
+  z-index: 1;
+}
+
+.product-new .container-product-card-image::after{
+  content: '';
+  position: absolute;
+  display: block;
+  top: 27px;
+  left: 273px;
+  height: 60px;
+  width: 60px;
+  background: url(../images/icons/product-new.svg);
+}
+
+.product-card-image-wrapper {
+  position: relative;
+}
+
+.product-card-image-wrapper::before {
+  position: absolute;
+  display: block;
+  top: 180px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #000;
+  z-index: 3;
+}
+
+.product-card-image-wrapper::after {
+  position: absolute;
+  display: block;
+  top: 186px;
+  left: 50%;
+  width: 220px;
+  height: 8px;
+  background-color: #FFE17F;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.product-card-link:hover .container-product-card-image::before {
+  content: '';
+}
+
+.product-card-link:hover .product-card-image-wrapper::before {
+  content: 'Подробнее';
+}
+
+.product-card-link:hover .product-card-image-wrapper::after {
+  content: '';
+}
+
+.product-card-link:hover .product-description-container{
+  opacity: .6;
+}
+
+.product-card-link:active .product-card-image-wrapper::after{
+  background-color: #FFC700;
+}
+
+.product-card-link:focus{
+  outline: 2px solid #AF4FFF;
 }
 
 .product-description-container {
   display: flex;
   justify-content: space-between;
-}
-
-.product-card-image {
-  margin-bottom: 32px;
-  object-fit: contain;
 }
 
 .product-card-title {
@@ -1281,15 +1369,6 @@ p.contacts-address-text {
   list-style-type: none;
 }
 
-.pagination-prev,
-.pagination-next {
-  font-family: "Raleway", sans-serif;
-  line-height: 21px;
-  text-transform: uppercase;
-  color: #000;
-  text-decoration: none;
-}
-
 .pagination-link {
   display: block;
   box-sizing: border-box;
@@ -1299,18 +1378,52 @@ p.contacts-address-text {
   line-height: 20px;
   text-align: center;
   color: #444;
-  opacity: .3;
   text-decoration: none;
-  padding: 10px 16px;
+  padding: 10px 10px;
+  transition: .3s;
 }
+
+.span.pagination-link,
+.pagination-link span {
+  opacity: .3;
+}
+
+a.pagination-link:not(.pagination-current):hover span {
+  opacity: 1;
+}
+
+a.pagination-link:not(.pagination-current):active span {
+  opacity: .1;
+}
+
+a.pagination-link:focus {
+  outline: 2px solid #AF4FFF;
+}
+
 
 .pagination-link.pagination-current {
   opacity: .6;
 }
 
-.pagination-prev,
-.pagination-next {
+.pagination-button {
   padding: 25px;
+  font-family: "Raleway", sans-serif;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: #000;
+  text-decoration: none;
+}
+
+.pagination-button:not(.pagination-disabled):hover {
+  background-color: #DCDCDC;
+}
+
+.pagination-button:not(.pagination-disabled):active span{
+  opacity: .3;
+}
+
+.pagination-button:focus {
+  outline: 2px solid #AF4FFF;
 }
 
 .pagination-disabled {
