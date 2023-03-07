@@ -174,6 +174,7 @@ body {
   border-left: none;
   border-radius: 0 20px 20px 0;
   background-color: transparent;
+  padding: 10px;
 }
 
 .search-button:hover {
@@ -880,6 +881,40 @@ p.contacts-address-text {
 .newsletter-form {
   width: 810px;
   display: flex;
+}
+
+.newsletter-button {
+  width: 253px;
+  height: 57px;
+  padding: 15px;
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border: 3px solid #C4C4C4;
+  background-color: transparent;
+}
+
+.newsletter-form .field {
+  flex-grow: 1;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 16px;
+  border: none;
+  border-bottom: 3px solid #C4C4C4;
+  background-color: transparent;
+}
+
+.newsletter-form .field::placeholder {
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #444;
+  opacity: .5;
 }
 
 .free {
