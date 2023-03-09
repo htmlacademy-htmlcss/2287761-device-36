@@ -1317,24 +1317,6 @@ p.contacts-address-text {
   margin-bottom: 60px;
 }
 
-.catalog-filter-title {
-  font-weight: 700;
-  line-height: 20px;
-  color: #000;
-}
-
-.catalog-filter-list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-.control {
-  font-size: 16px;
-  line-height: 20px;
-  color: #000;
-}
-
 .sorting-container {
   display: flex;
   align-items: center;
@@ -1636,4 +1618,226 @@ a.pagination-link:focus {
 .pagination-disabled {
   color: #444;
   opacity: .3;
+}
+
+
+/* Catalog-form */
+
+.catalog-filter {
+  padding: 0 60px;
+}
+
+.catalog-filter-group {
+  position: relative;
+  margin: 0;
+  margin-bottom: 35px;
+  border: none;
+}
+
+.catalog-filter-title {
+  font-weight: 700;
+  line-height: 20px;
+  color: #000;
+}
+
+.catalog-filter-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.catalog-filter-group::before {
+  content: '';
+  position: absolute;
+  display: block;
+  top: -32px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #000;
+}
+
+/* Range-slider */
+
+.range-scale {
+  position: relative;
+  height: 2px;
+  background-color: #DCDCDC;
+  margin-bottom: 68px;
+  margin-top: 28px;
+}
+
+.range-bar {
+  position: absolute;
+  height: 2px;
+  background-color: #000;
+}
+
+.range-toggle-wrapper {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.toggle-min {
+  left:0;
+  top: -9px;
+  transform: translateX(-50%);
+}
+
+.toggle-max {
+  right: 0;
+  top: -9px;
+  transform: translateX(50%);
+}
+
+.range-toggle {
+  width: 18px;
+  height: 18px;
+}
+
+.range-toggle {
+  display: block;
+  width: 22px;
+  height: 22px;
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.container-range-toggle {
+  width: 18px;
+  height: 18px;
+  background-color: #EBEBEB;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.range-toggle:hover {
+  opacity: .5;
+}
+.range-toggle:active .container-range-toggle{
+  background-color: #000;
+}
+.range-toggle:active {
+  opacity: 1;
+}
+
+.range-toggle:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.catalog-filter-label {
+  display: flex;
+  justify-content: center;
+}
+
+.range-input {
+  width: 12px;
+  margin-left: 2px;
+  padding: 0 2px;
+  font: inherit;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  appearance: textfield;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+/* Control-mark */
+
+.control {
+  position: relative;
+  display: block;
+  padding-left: 36px;
+}
+
+.container-control-mark {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  padding: 2px;
+}
+
+.control-mark {
+  position: relative;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #000;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+.control-input[type="radio"] + .container-control-mark .control-mark {
+  border-radius: 50%;
+}
+
+.control-label {
+  font-size: 16px;
+  line-height: 20px;
+  color: #000;
+}
+
+.control:hover {
+  opacity: .6;
+}
+
+.control:active {
+  opacity: .3;
+}
+
+.control:disabled {
+  opacity: .1;
+}
+
+.control-input:focus + .container-control-mark {
+  outline: 2px solid #AF4FFF;
+}
+
+.control-input[type="checkbox"]:checked + .container-control-mark .control-mark {
+  background-image: url(../images/icons/tick.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.control-input[type="radio"]:checked + .container-control-mark .control-mark::before {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 8px;
+  width: 8px;
+  top: 50%;
+  left: 50%;
+  background-color: #000;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.filter-button {
+  font-size: 18px;
+  background-color: transparent;
+  border: none;
+  width: calc(100% + 20px);
+}
+
+.filter-button::before {
+  z-index: 0;
+}
+
+.filter-button-description {
+  position: relative;
+  z-index: 1;
 }
