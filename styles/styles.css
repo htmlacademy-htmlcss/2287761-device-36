@@ -77,18 +77,23 @@ body {
   transition: .3s;
 }
 
-.button:hover::before {
+.button:not(.disabled):hover::before {
   height: 100%;
   cursor: pointer;
 }
 
-.button:active::before {
+.button:not(.disabled):active::before {
   height: 100%;
   background-color: #FFCC33;
 }
 
-.button:focus {
+.button:not(.disabled):focus {
   outline: 2px solid #AF4FFF;
+}
+
+.button.disabled {
+  opacity: .3;
+  cursor: default;
 }
 
 .main-container {
@@ -171,7 +176,6 @@ body {
   font-weight: 400;
   text-align: center;
   border: 2px solid #000;
-  border-left: none;
   border-radius: 0 20px 20px 0;
   background-color: transparent;
   padding: 10px;
@@ -196,10 +200,16 @@ body {
   border: 2px solid #000;
   background-color: transparent;
   padding-left: 48px;
+  padding-right: 5px;
   background-image: url("../images/icons/search.svg");
   background-repeat: no-repeat;
   background-size: 16px 16px;
   background-position: 12px 10px;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  border-right: none;
 }
 
 .navigation-form .field:focus {
@@ -269,12 +279,16 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .container-navigation-level-2 .navigation-list {
   width: 471px;
   display: flex;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
 }
 
 .container-navigation-level-2 .navigation-item {
@@ -466,20 +480,21 @@ body {
   transform: rotate(180deg);
 }
 
-.slider-button:hover {
+.slider-button:not(:disabled):hover {
   opacity: .6;
 }
 
-.slider-button:active {
+.slider-button:not(:disabled):active {
   opacity: .3;
 }
 
-.slider-button:focus {
+.slider-button:not(:disabled):focus {
   outline: 2px solid #AF4FFF;
 }
 
 .slider-button:disabled {
   opacity: .1;
+  cursor: default;
 }
 
 .slider-pagination {
@@ -491,6 +506,8 @@ body {
   padding: 0;
   list-style-type: none;
   margin-top: -13px;
+  position: relative;
+  z-index: 1;
 }
 
 .slider-pagination-item {
@@ -516,16 +533,21 @@ body {
   box-sizing: border-box;
 }
 
-.slider-pagination-button:hover {
+.slider-pagination-button:not(:disabled):hover {
   opacity: .6;
 }
 
-.slider-pagination-button:active {
+.slider-pagination-button:not(:disabled):active {
   opacity: .3;
 }
 
-.slider-pagination-button:focus {
+.slider-pagination-button:not(:disabled):focus {
   outline: 2px solid #AF4FFF;
+}
+
+.slider-pagination-button:disabled {
+  opacity: .1;
+  cursor: default;
 }
 
 .slider-pagination-button-current .container-pagination-button {
@@ -535,7 +557,7 @@ body {
 /* device-pic */
 
 .device-pic {
-  padding: 70px 0 70px 0;
+  padding: 70px 0 81px 0;
 }
 
 .device-pic-list {
@@ -589,7 +611,7 @@ body {
 
 /* additional-services */
 
-.additional-services{
+.additional-services {
   position: relative;
   padding-bottom: 142px;
 }
@@ -689,14 +711,14 @@ body {
 }
 
 .services-block-description {
-  width: 452px;
+  width: 455px;
   margin-left: 116px;
 }
 
 /* delivery */
 
 .delivery {
-  padding-bottom: 70px;
+  padding-bottom: 68px;
 }
 
 .plash-block {
@@ -774,16 +796,30 @@ body {
 }
 
 .about-us {
+  position: relative;
   width: 530px;
 }
 
 .contacts {
+  position: relative;
   width: 530px;
+}
+
+.about-us::before,
+.contacts::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 84px;
+  height: 7px;
+  top: 0;
+  left: 0;
+  background-color: #000;
 }
 
 .about-us-title,
 .contacts-title {
-  margin-top: 40px;
+  margin-top: 47px;
   margin-bottom: 48px;
 }
 
@@ -801,15 +837,30 @@ body {
 .transport-companies {
   margin: 0;
   padding: 0;
+  list-style-type: none;
   margin-bottom: 30px;
-  padding-left: 20px;
+  padding-left: 37px;
 }
 
 .transport-companies li {
-    font-weight: 700;
-    line-height: 20px;
-    color: #000;
-    margin-bottom: 19px;
+  position: relative;
+  font-weight: 700;
+  line-height: 20px;
+  color: #000;
+  margin-bottom: 19px;
+}
+
+.transport-companies li::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 8px;
+  height: 8px;
+  top: 50%;
+  left: -33px;
+  transform: translateY(-50%);
+  background-color: #FFC700;
+  border-radius: 50%;
 }
 
 .contacts-phone {
@@ -844,7 +895,7 @@ p.contacts-address-text {
 .subscribe {
   background-color: #F0F0F0;
   padding-top: 64px;
-  padding-bottom: 56px;
+  padding-bottom: 49px;
 }
 
 .subscribe-title {
@@ -858,16 +909,17 @@ p.contacts-address-text {
 
 .subscribe-description {
   margin: 0;
+  margin-top: 8px;
 }
 
 .container-subscribe {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
 .container-subscribe.level-1 {
-  margin-bottom: 144px;
+  margin-bottom: 139px;
+  margin-left: 7px;
 }
 
 .container-subscribe-title {
@@ -875,7 +927,12 @@ p.contacts-address-text {
 }
 
 .container-subscribe-description {
-  width: 560px;
+  flex-grow: 1;
+  margin-left: 252px;
+}
+
+.container-subscribe {
+  justify-content: space-between;
 }
 
 .newsletter-form {
@@ -896,16 +953,44 @@ p.contacts-address-text {
   text-transform: uppercase;
   border: 3px solid #C4C4C4;
   background-color: transparent;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.newsletter-button:not(:disabled):hover {
+  color: #fff;
+  background-color: #000;
+  border-color: #000;
+}
+
+.newsletter-button:not(:disabled):active span {
+  opacity: .3;
+}
+
+.newsletter-button:not(:disabled):focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.newsletter-button:disabled {
+  opacity: .3;
+  cursor: default;
 }
 
 .newsletter-form .field {
   flex-grow: 1;
-  padding-top: 11px;
-  padding-bottom: 11px;
-  padding-left: 16px;
+  padding: 11px 16px;
   border: none;
   border-bottom: 3px solid #C4C4C4;
   background-color: transparent;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.newsletter-form .field:focus {
+  background-color: #DCDCDC;
+  outline: none;
 }
 
 .newsletter-form .field::placeholder {
@@ -936,6 +1021,7 @@ p.contacts-address-text {
 .footer-logo {
   display: block;
   width: 145px;
+  height: 36px;
   margin-bottom: 35px;
   transition: .3s;
 }
@@ -994,6 +1080,10 @@ p.contacts-address-text {
   transition: .3s;
 }
 
+.footer-phone-item:nth-child(1) {
+  margin-bottom: 62px;
+}
+
 .phone:hover {
   color: #FFC700;
 }
@@ -1050,15 +1140,11 @@ p.contacts-address-text {
   flex-grow: 1;
 }
 
-.footer-phone-item:nth-child(1){
-  margin-bottom: 62px;
-}
-
 .footer-logo-developer-link {
   color: #FFC700;
   width: 115px;
   transition: .3s;
-  display: block;
+  display: flex;
   margin-left: auto;
 }
 
