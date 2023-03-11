@@ -33,10 +33,45 @@
             <li class="navigation-item">
               <span class="count-cart">2</span>
               <a class="navigation-link" href="#">Корзина</a>
+              <div class="popover popover-cart">
+                <div class="popover-content">
+                  <h2 class="visually-hidden">Корзина</h2>
+                  <ul class="cart-items-list">
+                    <li class="cart-item">
+                      <a class="container-cart-device" href="#">
+                        <img class="cart-device-image" src="images/cart/cart-1.jpg" width="39" height="43" alt="Любительская селфи-палка.">
+                        <p class="cart-item-title">Любительская селфи-палка</p>
+                      </a>
+                      <button type="button" class="cart-item-button">
+                        <span class="visually-hidden">Удалить из корзины</span>
+                      </button>
+                    </li>
+                    <li class="cart-item">
+                      <a class="container-cart-device" href="#">
+                        <img class="cart-device-image" src="images/cart/cart-2.jpg" width="39" height="43" alt="Профессиональная селфи-палка.">
+                        <p class="cart-item-title">Профессиональная селфи-палка</p>
+                      </a>
+                      <button type="button" class="cart-item-button">
+                        <span class="visually-hidden">Удалить из корзины</span>
+                      </button>
+                    </li>
+                  </ul>
+                  <div class="cart-info">
+                    <p class="product-count">Товаров: <span>2</span></p>
+                    <p class="product-sum">Сумма: <span>2000</span> ₽</p>
+                  </div>
+                  <div class="container-cart-button">
+                    <div class="container-cart-button-focus">
+                      <button type="button" class="cart-button"><span>Открыть корзину</span>
+                    </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
             </li>
           </ul>
           <div class="container-navigation-level-2">
-            <div class="navigation-right-column">
+            <div class="container-navigation-button-toggle">
               <a class="navigation-button-toggle" href="#">
                 <span class="accordion-title">Каталог товаров</span>
                 <svg class="accordion-pic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="none" viewBox="0 0 50 50" alt="Кнопка с выпадающим списком.">
@@ -49,6 +84,38 @@
                   </defs>
                 </svg>
               </a>
+              <ul class="catalog">
+                <li class="subcatalog subcatalog-column-1">
+                  <ul>
+                    <li class="catalog-item">
+                      <a class="catalog-link" href="#">Виртуальная реальность</a>
+                    </li>
+                    <li class="catalog-item">
+                      <a class="catalog-link" href="#">Моноподы для cелфи</a>
+                    </li>
+                    <li class="catalog-item">
+                      <a class="catalog-link" href="#">Экшн-камеры</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="subcatalog subcatalog-column-2">
+                  <ul>
+                    <li class="catalog-item">
+                      <a class="catalog-link" href="#">Фитнес-браслеты</a>
+                    </li>
+                    <li class="catalog-item">
+                      <a class="catalog-link" href="#">Умные часы</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="subcatalog subcatalog-column-3">
+                  <ul>
+                    <li class="catalog-item">
+                      <a class="catalog-link" href="#">Квадрокоптеры</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
             </div>
             <ul class="navigation-list level-2">
               <li class="navigation-item">
@@ -241,7 +308,7 @@
                     </div>
                   </a>
                 </li>
-                <li class="product-card  product-new">
+                <li class="product-card">
                   <a class="product-card-link" href="#">
                     <div class="container-product-card-image">
                       <div class="product-card-image-wrapper">

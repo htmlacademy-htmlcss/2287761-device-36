@@ -225,6 +225,11 @@ body {
   color: #000;
   opacity: .3;
 }
+
+.navigation-item {
+  position: relative;
+}
+
 .level-1 .navigation-item:nth-child(1) {
   width: 517px;
 }
@@ -410,7 +415,7 @@ body {
 }
 
 .catalog-link:focus {
-  border: 2px solid #AF4FFF;
+  outline: 2px solid #AF4FFF;
 }
 
 .navigation-link {
@@ -457,8 +462,164 @@ body {
   background-color: #fff;
   border-radius: 50%;
 }
+/* Popover */
 
-/* device */
+.popover {
+  position: absolute;
+  top: 36px;
+  left: -140px;
+  width: 320px;
+  font-family: inherit;
+  color: #fff;
+  background-color: #000;
+  min-height: 180px;
+  box-sizing: border-box;
+  z-index: 2;
+  display: none;
+}
+
+.popover-open {
+  display: block;
+}
+
+.popover-content {
+  position: relative;
+  height: 100%;
+}
+
+.popover-content::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 6px;
+  background-image: url(../images/icons/popover-ticker.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.cart-items-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.cart-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.cart-item + .cart-item {
+  border-top: 1px solid rgba(255, 255, 255, .1);
+}
+
+.container-cart-device {
+  width: 215px;
+  display: flex;
+  padding: 2px;
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+}
+
+.cart-device-image {
+  display: block;
+  width: 39px;
+}
+
+.cart-item-title {
+  display: block;
+  margin: 0;
+  margin-left: 23px;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.cart-item-button {
+  margin-left: auto;
+  display: block;
+  width: 18px;
+  height: 18px;
+  padding: 2px;
+  box-sizing: border-box;
+  background-color: #000;
+  background-image: url(../images/cart/delete-item-button.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
+}
+
+.container-cart-device:hover,
+.cart-item-button:hover {
+  opacity: .6;
+}
+
+.container-cart-device:active,
+.cart-item-button:active {
+  opacity: .3;
+}
+
+.container-cart-device:focus,
+.cart-item-button:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.cart-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 7px 20px;
+  background-color: #1A1A1A;
+}
+
+.cart-info p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.container-cart-button {
+  padding: 20px;
+}
+
+.container-cart-button-focus {
+  padding: 2px;
+}
+
+.cart-button {
+  display: block;
+  width: 100%;
+  padding: 15px 16px;
+  background-color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+}
+
+.cart-button:hover {
+  background-color: #FFE17F;
+}
+
+.cart-button:active span{
+  opacity: .3;
+}
+.container-cart-button-focus:focus-within {
+  outline: 2px solid #AF4FFF;
+}
+
+.cart-button:focus {
+  outline: none;
+}
+
+/* Device */
 
 .number-device {
   display: block;
@@ -1299,6 +1460,10 @@ p.contacts-address-text {
   padding: 35px 0;
 }
 
+ .inner-header .block-content-container {
+  width: 1040px;
+ }
+
 .catalog-products .block-content-container {
   display: flex;
 }
@@ -1924,4 +2089,69 @@ a.pagination-link:focus {
 .filter-button-description {
   position: relative;
   z-index: 1;
+}
+
+/* Modal-window */
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(240, 240, 240, 0.9);
+  z-index: 3;
+  display: none;
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  border: 10px solid #000;
+  background-color: #fff;
+  padding: 62px 70px;
+  box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.modal-delivery-order {
+  width: 920px;
+  box-sizing: border-box;
+}
+
+.modal-close-button {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  top: 74px;
+  right: 70px;
+  border: none;
+  padding: 2px;
+  background-image: url(../images/icons/icon-cross.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.modal-close-button:hover {
+  opacity: .6;
+}
+
+.modal-close-button:active {
+  opacity: .3;
+}
+
+.modal-close-button:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.modal-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 50px;
+  line-height: 50px;
+  color: #000;
+  margin: 0;
+  padding-right: 60px;
 }
