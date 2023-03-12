@@ -18,7 +18,7 @@
           <ul class="navigation-list level-1">
             <li class="navigation-item">
               <form class="navigation-form form" action="https://echo.htmlacademy.ru/" method="post">
-                <label for="navigation-search"></label>
+                <label class="visually-hidden" for="navigation-search">Поиск</label>
                 <input class="field" placeholder="Поиск по сайту" type="search" name="navigation-search" id="navigation-search" required>
                 <button class="search-button" type="submit">Найти</button>
               </form>
@@ -347,7 +347,7 @@
           </div>
           <div class="container-subscribe level-2">
             <form class="newsletter-form form" action="https://echo.htmlacademy.ru/" method="post">
-              <label for="newsletter-email"></label>
+              <label class="visually-hidden" for="newsletter-email">Email</label>
               <input class="field" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required>
               <button class="newsletter-button" type="submit"><span>Подписаться</span></button>
             </form>
@@ -448,12 +448,51 @@
         </div>
       </div>
     </footer>
-    <div class="modal-container">
+    <div class="modal-container modal-container-close">
       <div class="modal modal-delivery-order">
         <button class="modal-close-button">
           <span class="visually-hidden">Закрыть</span>
         </button>
         <h2 class="modal-title">Доставка под заказ</h2>
+        <form class="delivery-order-form" action="https://echo.htmlacademy.ru/" method="get">
+          <div class="field-group delivery-order-form-name">
+            <label class="delivery-order-form-field-title" for="delivery-name">Ваше имя:</label>
+            <input class="delivery-order-form-field" type="text" id="delivery-name" name="delivery-name" placeholder="Введите имя" required>
+          </div>
+          <div class="field-group delivery-order-form-email">
+            <label class="delivery-order-form-field-title" for="delivery-email">Ваш e-mail:</label>
+            <input class="delivery-order-form-field" type="email" id="delivery-email" name="delivery-email" placeholder="Ваш e-mail" required>
+            <span>Забавный у вас адрес</span>
+          </div>
+          <div class="field-group delivery-order-form-purpose">
+            <label class="delivery-order-form-field-title" for="delivery-purpose">Что нужно привезти:</label>
+            <input class="delivery-order-form-field" type="text" id="delivery-purpose" name="delivery-purpose" placeholder="В свободной форме" required>
+          </div>
+          <div class="field-group delivery-order-form-quantity">
+            <span class="delivery-order-form-field-title form-label-icon">
+              <label class="delivery-order-form-field-title" for="delivery-quantity">Количество:</label>
+              <span class="tooltip">
+                <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
+                  <svg class="tooltip-icon" xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" viewBox="0 0 26 26">
+                    <circle cx="13" cy="13" r="13" fill="#FFE17F"/>
+                    <path fill="#000" d="M14 7h-2v2h2V7ZM14 11h-2v8h2v-8Z"/>
+                  </svg>
+                </button>
+                <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Постараемся найти, сколько нужно. Привезём сколько получится по требованиям к провозу багажа.</span>
+              </span>
+            </span>
+            <div class="container-quantity-plash-button">
+              <button class="quantity-button minus" type="button">
+                <span class="visually-hidden">Уменьшить количество</span>
+              </button>
+              <input class="delivery-order-form-field" type="number" value="1" id="delivery-quantity" name="delivery-quantity">
+              <button class="quantity-button plus" type="button">
+                <span class="visually-hidden">Увеличить количество</span>
+              </button>
+            </div>
+          </div>
+          <button class="button delivery-order-form-button" type="submit"><span>Отправить</span></button>
+        </form>
       </div>
     </div>
   </body>
