@@ -510,7 +510,7 @@ body {
 .popover {
   position: absolute;
   top: 36px;
-  left: -140px;
+  left: -143px;
   width: 320px;
   font-family: inherit;
   color: #fff;
@@ -518,11 +518,10 @@ body {
   min-height: 180px;
   box-sizing: border-box;
   z-index: 2;
-  display: none;
 }
 
-.popover-open {
-  display: block;
+.popover-close {
+  display: none;
 }
 
 .popover-content {
@@ -552,11 +551,12 @@ body {
 .cart-item {
   display: flex;
   align-items: flex-start;
-  padding: 20px;
+  padding: 19px;
 }
 
 .cart-item + .cart-item {
   border-top: 1px solid rgba(255, 255, 255, .1);
+  padding-top: 19px;
 }
 
 .container-cart-device {
@@ -585,14 +585,15 @@ body {
 .cart-item-button {
   margin-left: auto;
   display: block;
-  width: 18px;
-  height: 18px;
+  width: 10px;
+  height: 10px;
   padding: 2px;
   box-sizing: border-box;
   background-color: #000;
   background-image: url(../images/cart/delete-item-button.svg);
   background-repeat: no-repeat;
   background-position: center center;
+  border: none;
   cursor: pointer;
 }
 
@@ -614,7 +615,7 @@ body {
 .cart-info {
   display: flex;
   justify-content: space-between;
-  padding: 7px 20px;
+  padding: 11px 20px;
   background-color: #1A1A1A;
 }
 
@@ -625,7 +626,7 @@ body {
 }
 
 .container-cart-button {
-  padding: 20px;
+  padding: 18px;
 }
 
 .container-cart-button-focus {
@@ -639,7 +640,7 @@ body {
   background-color: #fff;
   font-family: 'Raleway', sans-serif;
   font-size: 18px;
-  line-height: 21px;
+  line-height: 20px;
   font-weight: 800;
   letter-spacing: 0.2em;
   text-transform: uppercase;
