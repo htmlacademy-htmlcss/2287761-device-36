@@ -800,6 +800,13 @@ body {
   z-index: 1;
 }
 
+@-moz-document url-prefix() {
+    .slider-pagination {
+    margin-top: 26px;
+  }
+}
+
+
 .slider-pagination-item {
   margin: 0 8px;
 }
