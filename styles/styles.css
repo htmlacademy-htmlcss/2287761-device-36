@@ -1648,16 +1648,20 @@ p.contacts-address-text {
   background-position: right center;
 }
 
-.select-control:hover {
+.select-control:not(:disabled):hover {
   opacity: .6;
 }
 
-.select-control:active {
+.select-control:not(:disabled):active {
   opacity: .3;
 }
 
 .select-control:focus {
   outline: 2px solid #AF4FFF;
+}
+
+.select-control:disabled {
+  opacity: .1;
 }
 
 .button-sorting {
@@ -1964,16 +1968,16 @@ a.pagination-link:focus {
   list-style-type: none;
 }
 
-/* .catalog-filter-group::before {
+.catalog-filter-group::before {
   content: '';
   position: absolute;
   display: block;
-  top: -32px;
+  top: -54px;
   left: 0;
   height: 2px;
   width: 100%;
   background-color: #000;
-} */
+}
 
 /* Range-slider */
 
@@ -2054,8 +2058,7 @@ a.pagination-link:focus {
   justify-content: center;
   padding: 2px;
   font-family: inherit;
-  color: #000;
-  opacity: .3;
+  color: rgba(0, 0, 0, 0.3);
   line-height: 20px;
   font-size: 14px;
 }
@@ -2069,6 +2072,8 @@ a.pagination-link:focus {
   background-color: transparent;
   border: none;
   appearance: textfield;
+  color: rgba(0, 0, 0, 0.3);
+  outline: none;
 }
 
 .range-input::-webkit-outer-spin-button,
@@ -2121,9 +2126,13 @@ a.pagination-link:focus {
   display: block;
   width: 20px;
   height: 20px;
-  border: 2px solid #000;
+  border: 2px solid #ccc;
   border-radius: 3px;
   box-sizing: border-box;
+}
+
+.control-input:checked + .container-control-mark .control-mark {
+  border-color: #000;
 }
 
 .control-input[type="radio"] + .container-control-mark .control-mark {
