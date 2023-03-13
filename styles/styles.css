@@ -663,7 +663,14 @@ body {
   outline: none;
 }
 
-/* Device */
+/* Device-slider*/
+.slider-wrapper.current {
+  display: block;
+}
+
+.slider-wrapper {
+  display: none;
+}
 
 .number-device {
   display: block;
@@ -913,12 +920,7 @@ body {
 .additional-services .index-columns {
   display: flex;
   align-items: center;
-  margin-right: 63px;
   padding: 64px 0;
-  background-image: url("../images/postman.svg");
-  background-repeat: no-repeat;
-  background-size: 136px 164px;
-  background-position: center right;
 }
 
 .service-title {
@@ -938,7 +940,7 @@ body {
   margin-bottom: 35px;
 }
 
-.additional-services-button.button-choose {
+.additional-services-button.current {
   position: relative;
   color: #FFE17F;
   background-color: #000;
@@ -946,19 +948,19 @@ body {
   transition: .3s;
 }
 
-.additional-services-button.button-choose:not(.disabled):hover {
+.additional-services-button.current:not(.disabled):hover {
   padding-left: 35px;
 }
 
-.additional-services-button.button-choose:focus::before {
+.additional-services-button.current:focus::before {
   outline: 2px solid #AF4FFF;
 }
 
-.additional-services-button.button-choose:focus {
+.additional-services-button.current:focus {
   outline: none;
 }
 
-.additional-services-button.button-choose::before {
+.additional-services-button.current::before {
   content:'';
   position: absolute;
   display: block;
@@ -994,8 +996,25 @@ body {
 }
 
 .services-block-description {
-  width: 455px;
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
   margin-left: 116px;
+  align-items: center;
+  display: none;
+}
+
+.services-block-description.current {
+  display: flex;
+}
+
+.services-block-description-wrapper {
+  width: 480px;
+}
+
+.service-block-image {
+  display: block;
+  margin-right: 63px;
 }
 
 /* delivery */
