@@ -1078,9 +1078,6 @@ z-index: -1;
 display: -webkit-box;
 display: -ms-flexbox;
 display: flex;
--webkit-box-align: center;
-    -ms-flex-align: center;
-        align-items: center;
 padding: 64px 0;
 }
 
@@ -1171,9 +1168,6 @@ display: flex;
     -ms-flex-pack: justify;
         justify-content: space-between;
 margin-left: 116px;
--webkit-box-align: center;
-    -ms-flex-align: center;
-        align-items: center;
 display: none;
 }
 
@@ -1827,6 +1821,7 @@ display: flex;
 
 .catalog-filter {
 width: 320px;
+box-sizing: border-box;
 }
 
 .catalog-filter ul {
@@ -2306,6 +2301,8 @@ padding-top: 12px;
 margin: 0;
 padding: 0;
 list-style-type: none;
+width: 200px;
+word-wrap: break-word;
 }
 
 .catalog-filter-group::before {
@@ -2457,11 +2454,8 @@ padding-left: 35px;
 .container-control-mark {
 display: block;
 position: absolute;
-top: 50%;
+top: 0;
 left: -4px;
--webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
 width: 20px;
 height: 20px;
 padding: 2px;
